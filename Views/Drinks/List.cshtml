@@ -1,0 +1,14 @@
+﻿@model DrinkListViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Drinks List</h1>
+<h3>@Model.CurrentCategory</h3>
+
+<div class="row marginTop">
+    @foreach (var drink in Model.Drinks)
+    {
+        @Html.Partial("DrinksSummary", drink)
+    }
+</div>
